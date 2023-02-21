@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>training.staff.view - User Notes</title>
+
+</head><body>
+<h2>training.staff.view - User Notes</h2>
+
+<ul>
+	<li><b>NOTE:</b> There are currently no PHP routines for adding new users or editing users through a web based GUI interface.
+		<br>All updates to user file must currently be completed from the command line.
+	<li>Commands listed below are examples of manipulating the user data manually but you should be comfortable with general MySQL navigation from the command line.
+	<li>Assumes you are successfully logged into the florawww machine and into the MySQL "bcm" database (instructions elsewhere)
+		<ul>
+			<li><i>ssh -p 22022 username@florawww.eeb.uconn.edu</i>
+			<li><i>php -u username -p bcm</i>
+		</ul>
+	<li>Command examples ("mysql>" is command prompt)
+	<br><b>WARNING:</b> Be very careful to check the "where" portion of statement
+	<br>Omission of this part of statement results in changes to EVERY RECORD in database.
+	<ul>
+		<li>Display table structure (bcm.users)
+		<ul>
+			<li>mysql><i>describe users;</i>
+		</ul>
+
+		<li>Lookup user by NetID
+		<ul>
+			<li>mysql><i>select * from users where netid='CEM02011';</i>
+		</ul>
+
+		<li>Lookup specific user fields by recno (superscript # preceeding netid)
+		<ul>
+			<li>mysql><i>select lname,fname,netid,wps from users where recno=2;</i>
+		</ul>
+
+		<li>Update wps (worker protection training date) to current date for netid
+		<ul>
+			<li>mysql><i>update users set wps=curdate() where netid='CEM02011';</i>
+			<li>Other date fields include:
+			<ul>
+				<li>whh = workplace hazard assessment
+				<li>hazcomm = hazard communication
+				<li>wps = worker protection standard
+				<li>asbestos = asbestos awareness
+				<li>fallprot = fall protection - either HuskyCT or extended classroom
+				<li>ppe = personal protective equipment
+				<li>dustmask = voluntary use of dust masks
+				<li>respirator = annual respirator training (required of applicators only)
+			</ul>
+		</ul>
+		
+		<li>Insert new user into database table
+		<ul>
+			<li>mysql><i>insert into users (fname,lname,netid,title,active,staff) values ('Joe','Someuser','jas12345','Staff, Volunteer',1,1);</i>
+			<li>active = active user, 0-no, 1-yes
+			<br>setting any user to 0 effectively removes them from lists and calculations without deleting record
+			<ul>
+				<li>mysql><i>update users set active=0 where netid='jas12345'</i>
+			<li>staff = greenhouse staff member, 0-no, 1-yes
+			<li>title = be consistent, refer to similar roles already in use.
+		</ul>
+</ul>
+</form></table>
+</body></html>
+

@@ -1,0 +1,90 @@
+Evaluation Scoring Notes
+  ** This may not be synchronized with evaluate.php, check there for actual values
+  
+New Plant Boost
+	Score 1-3 points in first three years of accession
+	3pts in year 1, 2pts in year 2, 1pt in year 3
+	
+Importance ranking
+		gh_inv.importance
+	Feature = 10pts
+	Research-Active = 10pts
+	Essential = 5pts
+	Desirable = 2pts
+	Redundant = -10pts
+	Unresolved Name = -5pts
+	Oversize/Cull = -20pts
+	
+BGCI Status
+		gh_inv.bgci_status
+		gh_inv.bgci_exsitusites
+	1pt for accepted status
+	1pt each for exsitusites fewer than 6
+		5 sites = 1pt, 3 sites = 3pts, 1 site = 5pts
+		1 site indicates only UConn/EEB in BGCI database
+	
+Reliable Bloomer
+	3 points if noted in bloom more than 10 weeks in previous year
+	
+Pest Magnet
+	Deduct 1pt for every 5 pest scouting notation in excess of 10 (past year)
+	
+Wild Collected
+	5pts
+	
+IUCN Red List 2010 
+		gh_inv.redlist2010
+	(1997 listing no longer scored)
+	some non-IUCN Redlists (ex SANBI) are calculated as if IUCN
+	Extinct in Wild = 10pts
+	Critically Endangered = 7pts
+	Endangered = 5pts
+	Vulnerable = 2pts
+	Near Threatened = 1pt
+	
+CITES
+		gh_inv.cites
+	CITES I = 3pts
+	CITES II = 3pts
+	
+Keywords
+	gh_inv.keywords
+	1pt scored for each keyword in database
+
+Exhibit
+	not currently implemented
+	commented out (untested) code in file
+	
+Taxonomy
+		lookup tables gh_inv>classify>famcomm
+	Sole member of family = 10pts
+	2 representatives of family = 5pts (each accession)
+	Sole representative of subfamily = 4pts
+	Sole representative of tribe = 2pts
+	Sole representative of genus = 3pts
+	Sole member of section = 1pt
+	Sole member of series = 1pt
+	
+Class Usage
+	2pts for each class usage
+	No maximum at this time
+	
+Trade
+	Plants to external institutions/users
+	1pt each trade
+	max 5pts
+	
+Research Use
+	1pt each use
+	max 5pts
+	
+Outreach Use
+	1pt each use
+	max 5pts
+	
+Discretionary Points
+		gh_inv.ev_disc_pt
+		gh_inv.ev_disc_re
+	any amount - +/-
+	be sure to include a valid reason for points
+	only available from command line, no user input screen

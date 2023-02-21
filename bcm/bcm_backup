@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#echo '*****************************************************************'
+#echo '** Enter MySQL password to backup databases *********************'
+#echo '*****************************************************************'
+mysqldump -u clinton -p --allow-keywords bcm > /media/drive2/home/clinton/mysql_backup/bcmback.sql
+cp /media/drive2/home/clinton/mysql_backup/bcmback.sql /home/clinton/Desktop/bcmback.sql
+#echo '*****************************************************************'
+#echo '** Backup to NFS mount script ***********************************'
+#echo '*****************************************************************'
+# What to backup. 
+#backup_files="/home /var /usr/local /etc"
+backup_files="/var/bcm /var/www"
+# Where to backup to.
+#dest="/media/backup"
+dest="/media/drive2/home/clinton/server_backups"
+# Create archive filename.
+day=$(date +%A)
+archive_file="BACKUP_$day.tgz"
+# Print start status message.
+echo "Backing up $backup_files to $dest/$archive_file"
+#date
+
+# Backup the files using tar.
+tar czfv $dest/$archive_file $backup_files
+# Print end status message.
+#MAILTO=clinton.morse@uconn.edu

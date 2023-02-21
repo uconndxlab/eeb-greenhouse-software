@@ -1,0 +1,10 @@
+***mysql select into outfile must go to /var/lib/mysql-files/
+
+***file can not already exist
+
+Copy to terminal prompt:
+
+mysql -u root -pgreen_1house bcm -e 'select genhybsymbol,genus,sphybsymbol,species,infrarank,infraepithet,cultivar,bgci_hide into outfile "/var/lib/mysql-files/bgci_export.csv" fields terminated by "," lines terminated by "\n" from gh_inv where projnum="GEN_COLL" order by latin_name;'
+
+must use sudo su to drop to root to move files out of that directory.
+

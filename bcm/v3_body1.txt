@@ -1,0 +1,50 @@
+<body>
+<div id="uconn-banner">
+  <div id="uconn-header-container">
+    <div class="container">
+      <div class="row-fluid">
+        <div id="home-link-container">
+          <a id="home-link" href="http://uconn.edu/">
+            <span id="wordmark">UCONN</span>
+            <span id="university-of-connecticut">UNIVERSITY OF CONNECTICUT</span>
+          </a>
+        </div>
+          <div id="button-container">
+            <span>
+              <a class="btn" href="http://uconn.edu/search.php" title="Search"><i class="icon-search"></i>
+              </a>
+            </span>
+            <span>
+              <a class="btn" href="http://uconn.edu/azindex.php" title="AZ Index"><i class="icon-a-z"></i></a>
+            </span>
+          </div>
+      </div>  
+    </div>  
+  </div>
+</div>
+
+<div id="uc-titlebar" class="uc-titlebar-gradient gradient clearfix">
+	<div class="container"> 
+  <div class="container" id="site-header">
+    <div class="row-fluid">
+        <p id="super-title"><a href="http://www.eeb.uconn.edu/">Ecology & Evolutionary Biology</a></p>
+        <h1 id="site-title"><a href="/">Biodiversity Education & Research Greenhouses</a></h1>        
+    </div>
+  </div>
+
+<nav id="uc-navbar" class="navbar">
+	<div class="navbar-inner">
+		<ul id="menu-top-nav" class="nav textnav with-drop">
+			<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="index.html">Home</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="collections.html">Collections</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="teaching.html">Teaching</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="research.html">Research</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="visiting.html">Visiting</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="staff.html">Staff</a></li>	
+			<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="donations.html">Support the Collections</a></li>		
+		</ul>				
+					
+	</div>
+</nav>
+</div>
+</div>

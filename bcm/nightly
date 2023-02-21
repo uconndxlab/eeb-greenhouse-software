@@ -1,0 +1,44 @@
+b#!/bin/bash
+
+php5 -f '/var/bcm/v4_statistics.php'
+php5 -f '/var/bcm/v4_alphapage.php'
+php5 -f '/var/bcm/v4_chem_list.php'
+php5 -f '/var/bcm/v4_brus.php'
+php5 -f '/var/bcm/v4_wishlist.php'
+php5 -f '/var/bcm/v4_surplus.php'
+php5 -f '/var/bcm/v4_generic_map.php'
+php5 -f '/var/bcm/v4_tdwgpage.php'
+php5 -f '/var/bcm/v4_regions.php'
+
+### Still to be updated...
+#php5 -f '/var/bcm/v3_classify_full_generate.php'
+#php5 -f '/var/bcm/v3_sprayhistory.php'
+#php5 -f '/var/bcm/v3_apgorders.php'
+
+#php5 -f '/var/bcm/v3_page_updates.php'
+#php5 -f '/var/www/bcm/evaluate_all.php'
+
+
+#echo '*****************************************************************'
+#echo '** Enter MySQL password to backup databases *********************'
+#echo '*****************************************************************'
+mysqldump -u clinton -pgreen_1house --allow-keywords bcm > /media/drive2/home/clinton/mysql_backup/bcmback.sql
+cp /media/drive2/home/clinton/mysql_backup/bcmback.sql /home/clinton/Desktop/bcmback.sql
+#echo '*****************************************************************'
+#echo '** Backup to NFS mount script ***********************************'
+#echo '*****************************************************************'
+# What to backup. 
+#backup_files="/home /var /usr/local /etc"
+# Where to backup to.
+#dest="/media/backup"
+# Create archive filename.
+#day=$(date +%A)
+#archive_file="BACKUP_$day.tgz"
+# Print start status message.
+#echo "Backing up $backup_files to $dest/$archive_file"
+#date
+
+# Backup the files using tar.
+#tar czfv $dest/$archive_file $backup_files
+# Print end status message.
+#MAILTO=clinton.morse@uconn.edu

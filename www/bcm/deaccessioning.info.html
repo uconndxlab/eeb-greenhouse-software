@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>Deaccessioning - User Notes</title>
+
+</head><body>
+<h2>Deaccessioning - User Notes</h2>
+
+<ul>
+	<li>To deaccession a plant, go to the accession page for that plant
+	<ol>
+		<li>Change all quantities to 0 (zero)
+		<li>Change all locations to 0 (zero)
+		<li>Change <b>Currently:</b> to:
+		<ul><li>deceased - if plants are dead
+			<li>culled - if plants removed for reasons other than death
+		</ul>
+		<li>Change <b>Assigned to:</b> to <b>DELETE##</b> where ## is year of deaccession
+		<ul>
+			<li>ie plants deleted in 2020 should be placed in <b>DELETE20</b>
+			<li>This allows plants to be (re)accessioned should it be determined they were removed in error
+			<br>Reaccessioned plants will retain all historical notations
+			<li>Also allows previously researched data to be retained for future use or copying to new accessions of same species
+			<li>Drop-down list is auto populated from existing codes
+			<ul>
+				<li>Each year, a new code will need to be manually entered for first deaccession via commandline as follows:
+				<li>Assumes first deaccession for 2021 and first plant to be deaccessioned is 198912345, change those values as required
+				<li>From the MySQL command line (local or remote)
+				<li><i>update gh_inv set projnum='DELETE21' where codeno = 198912345;</i>
+			</ul>
+		</ul>
+	</ol>
+</ul>
+</body></html>

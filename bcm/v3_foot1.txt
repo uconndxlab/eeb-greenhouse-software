@@ -1,0 +1,16 @@
+<div id="uc-footer">
+	<div class="container">
+	<ul id="uc-footer-links" class="clearfix">
+    			<li>
+			&copy; <a href="http://uconn.edu">University of Connecticut</a>
+		</li>
+		<li>
+			<a href="http://uconn.edu/disclaimers-and-copyrights.php">Disclaimers, Privacy &amp; Copyright</a>
+		</li>      		
+	</ul>
+	</div>
+</div>
+
+
+</body>
+</html>
